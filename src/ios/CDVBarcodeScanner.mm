@@ -932,10 +932,10 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 
-#define RETICLE_SIZE    500.0f
-#define RETICLE_WIDTH    10.0f
-#define RETICLE_OFFSET   60.0f
-#define RETICLE_ALPHA     0.4f
+#define RETICLE_SIZE    550.0f
+#define RETICLE_WIDTH     4.0f
+#define RETICLE_OFFSET    2.0f
+#define RETICLE_ALPHA     0.7f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
@@ -956,7 +956,7 @@ parentViewController:(UIViewController*)parentViewController
         CGContextStrokePath(context);
     }
 
-    if (self.processor.is2D) {
+    /*if (self.processor.is2D) {
         UIColor* color = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:RETICLE_ALPHA];
         CGContextSetStrokeColorWithColor(context, color.CGColor);
         CGContextSetLineWidth(context, RETICLE_WIDTH);
@@ -968,7 +968,7 @@ parentViewController:(UIViewController*)parentViewController
                                        RETICLE_SIZE-2*RETICLE_OFFSET
                                        )
                             );
-    }
+    }*/
 
     result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
